@@ -1,0 +1,33 @@
+{
+  "name": {
+    "first": "Kyaw Bo Bo Aung"
+  },
+  "roles": [
+    "Full-stack Developer",
+    "Front-end Developer",
+    "Back-end Developer"
+  ],
+  "hero": {
+    "iam": "I'm a",
+    "description": "Passionate developer with expertise in creating robust, scalable applications from concept to deployment. I specialize in modern web technologies and love turning complex problems into elegant solutions.",
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full-stack"
+    },
+    "availability": "Available for opportunities",
+    "buttons": {
+      "work": "View My Work",
+      "contact": "Get In Touch"
+    },
+    "social": {
+      "github": "Github",
+      "linkedin": "Linkedin",
+      "mail": "Mail"
+    },
+    "image": {
+      "placeholderTitle": "Your photo will go here",
+      "placeholderDesc": "Replace this placeholder with your image"
+    }
+  }
+}

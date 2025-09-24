@@ -1,0 +1,33 @@
+{
+  "name": {
+    "first": "ကျော်ဘိုဘိုအောင်"
+  },
+  "roles": [
+    "Full-stack Developer",
+    "Front-end Developer",
+    "Back-end Developer"
+  ],
+  "hero": {
+    "iam": "I'am a",
+    "description": "စတင်မှ တည်ဆောက်သည့်အဆင့်အထိ ခိုင်ခံ့ပြီး တိုင်းတာနိုင်သော အပ်ပလီကေးရှင်းများကို ဖန်တီးနိုင်သော ကျွမ်းကျင်တဲ့ Developer တစ်ဦး ဖြစ်ပါတယ်။ ခေတ်မီ Web နည်းပညာတွေကို အထူးပြုလုပ်ပြီး ရှုပ်ထွေးတဲ့ ပြဿနာတွေကို ရှင်းလင်းတဲ့ ဖြေရှင်းချက်တွေ အဖြစ် ပြောင်းလဲနိုင်ပါတယ်။",
+    "skills": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "fullstack": "Full-stack"
+    },
+    "availability": "အခွင့်အလမ်းများအတွက် အဆင်သင့်",
+    "buttons": {
+      "work": "ကျွန်တော့်အလုပ်များကိုကြည့်ရန်",
+      "contact": "ဆက်သွယ်ရန်"
+    },
+    "social": {
+      "github": "ဂစ်ဟပ်",
+      "linkedin": "လင့်ခ်ဒိန်း",
+      "mail": "မေးလ်"
+    },
+    "image": {
+      "placeholderTitle": "ဓာတ်ပုံကို ဤနေရာတွင် ထည့်ပါ",
+      "placeholderDesc": "ဤနေရာရှိ Placeholder ကို သင့်ဓာတ်ပုံဖြင့် အစားထိုးပါ"
+    }
+  }
+}
