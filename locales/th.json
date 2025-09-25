@@ -3,17 +3,18 @@
     "first": "Kyaw Bo Bo Aung"
   },
   "roles": [
-    "นักพัฒนา ฟูลสแตก",
-    "นักพัฒนา ฟรอนต์เอนด์",
-    "นักพัฒนา แบ็กเอนด์"
+    "Full-stack Developer",
+    "Front-end Developer",
+    "Back-end Developer"
   ],
   "hero": {
     "iam": "ฉันคือ",
     "description": "นักพัฒนาที่มีความเชี่ยวชาญในการสร้างแอปพลิเคชันที่แข็งแกร่งและปรับขนาดได้ ตั้งแต่แนวคิดจนถึงการปรับใช้ ฉันเชี่ยวชาญด้านเทคโนโลยีเว็บสมัยใหม่และชื่นชอบการเปลี่ยนปัญหาที่ซับซ้อนให้เป็นทางออกที่สวยงาม",
     "skills": {
-      "frontend": "ฟรอนต์เอนด์",
-      "backend": "แบ็กเอนด์",
-      "fullstack": "ฟูลสแตก"
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full-stack",
+      "cloud": "Cloud"
     },
     "availability": "พร้อมสำหรับโอกาสใหม่ ๆ",
     "buttons": {
@@ -28,6 +29,23 @@
     "image": {
       "placeholderTitle": "รูปถ่ายของคุณจะแสดงที่นี่",
       "placeholderDesc": "แทนที่ Placeholder นี้ด้วยรูปภาพของคุณ"
+    }
+  },
+  "skill": {
+    "title": "เทคโนโลยีที่ใช้",
+    "title2": "ทักษะ",
+    "description": "เทคโนโลยีและเครื่องมือที่ใช้ในการสร้างสรรค์ไอเดียให้เป็นจริง",
+    "frontend": {
+      "title": "Frontend",
+      "description": "การออกแบบ UI/UX ที่ทันสมัยด้วย React, NextJs และ responsive design"
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "API ที่สามารถขยายขนาดได้ด้วย Node.js, Express, Java, Spring Boot, REST, GraphQL และฐานข้อมูล"
+    },
+    "cloud": {
+      "title": "Cloud",
+      "description": "ไมโครเซอร์วิส, การนำไปใช้บนคลาวด์, Docker และ CI/CD pipelines"
     }
   }
 }

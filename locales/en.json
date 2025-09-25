@@ -13,7 +13,8 @@
     "skills": {
       "frontend": "Frontend",
       "backend": "Backend",
-      "fullstack": "Full-stack"
+      "fullstack": "Full-stack",
+      "cloud": "Cloud"
     },
     "availability": "Available for opportunities",
     "buttons": {
@@ -28,6 +29,23 @@
     "image": {
       "placeholderTitle": "Your photo will go here",
       "placeholderDesc": "Replace this placeholder with your image"
+    }
+  },
+  "skill": {
+    "title": "Tech Stack",
+    "title2": "Skills",
+    "description": "Technologies and tools I use to bring ideas to life",
+    "frontend": {
+      "title": "Frontend",
+      "description": "Modern UI/UX with React, NextJs and responsive design"
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "Scalable APIs with Node.js, Express, Java, Spring Boot, REST, GraphQL and databases"
+    },
+    "cloud": {
+      "title": "Cloud",
+      "description": "Microservices, Cloud deployment, Docker, and CI/CD pipelines"
     }
   }
 }

@@ -1,17 +1,8 @@
-'use client'
+"use client";
 import {
-  Code2,
-  Database,
-  Globe,
   Server,
-  Smartphone,
-  Palette,
-  Settings,
-  Zap,
   Cloud,
-  GitBranch,
-  Terminal,
-  Layers,
+  Monitor,
 } from "lucide-react";
 import HtmlIcon from "./svgs/html";
 import CssIcon from "./svgs/css";
@@ -32,8 +23,11 @@ import SassIcon from "./svgs/sass";
 import GraphQLIcon from "./svgs/graphql";
 import TailwindIcon from "./svgs/tailwind";
 import AwsIcon from "./svgs/aws";
+import { useTranslation } from "react-i18next";
 
 export default function SkillsCarousel() {
+  const { t } = useTranslation();
+
   const skills = [
     { name: "Java", icon: <JavaIcon />, color: "text-orange-300" },
     { name: "Spring", icon: <SpringIcon />, color: "text-green-300" },
@@ -65,18 +59,18 @@ export default function SkillsCarousel() {
   const duplicatedSkills = [...skills, ...skills, ...skills];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+    <section className="my-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Tech Stack &{" "}
+          <h2 className="text-4xl font-bold text-white mb-6">
+            {t("skill.title")} &{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-slate-400">
-              Skills
+              {t("skill.title2")}
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Technologies and tools I use to bring ideas to life
+            {t("skill.description")}
           </p>
 
           {/* Decorative line */}
@@ -121,27 +115,26 @@ export default function SkillsCarousel() {
         {/* Additional Skills Categories */}
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700 hover:bg-slate-700/30 transition-all duration-300">
-            <Code2 className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Frontend</h3>
+            <Monitor className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">{t("skill.frontend.title")}</h3>
             <p className="text-gray-400">
-              Modern UI/UX with React, NextJs and responsive design
+              {t("skill.frontend.description")}
             </p>
           </div>
 
           <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700 hover:bg-slate-700/30 transition-all duration-300">
             <Server className="w-12 h-12 text-green-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Backend</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">{t("skill.backend.title")}</h3>
             <p className="text-gray-400">
-              Scalable APIs with Node.js, Express, Java, Spring Boot, REST, GraphQL and databases
+              {t("skill.backend.description")}
             </p>
           </div>
 
           <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700 hover:bg-slate-700/30 transition-all duration-300">
-            <Cloud className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Cloud</h3>
+            <Cloud className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">{t("skill.cloud.title")}</h3>
             <p className="text-gray-400">
-              Microservices,
-              Cloud deployment, Docker, and CI/CD pipelines
+              {t("skill.cloud.description")}
             </p>
           </div>
         </div>
@@ -158,7 +151,7 @@ export default function SkillsCarousel() {
         }
 
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 35s linear infinite;
         }
 
         .animate-scroll:hover {

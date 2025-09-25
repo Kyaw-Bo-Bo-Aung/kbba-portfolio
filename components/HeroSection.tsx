@@ -48,7 +48,7 @@ export default function HeroSection() {
   }, [displayText, currentIndex, isDeleting, roles]);
 
   return (
-    <section className="min-h-screen from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-8">
+    <section className="py-20 min-h-screen flex items-center justify-center p-8">
       <div className="max-w-7xl w-full mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
