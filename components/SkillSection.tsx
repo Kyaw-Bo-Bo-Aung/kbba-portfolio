@@ -1,9 +1,5 @@
 "use client";
-import {
-  Server,
-  Cloud,
-  Monitor,
-} from "lucide-react";
+import { Server, Cloud, Monitor } from "lucide-react";
 import HtmlIcon from "./svgs/html";
 import CssIcon from "./svgs/css";
 import JsIcon from "./svgs/js";
@@ -24,6 +20,7 @@ import GraphQLIcon from "./svgs/graphql";
 import TailwindIcon from "./svgs/tailwind";
 import AwsIcon from "./svgs/aws";
 import { useTranslation } from "react-i18next";
+import HeadlineDivider from "./common/HeadlineDivider";
 
 export default function SkillsCarousel() {
   const { t } = useTranslation();
@@ -37,16 +34,16 @@ export default function SkillsCarousel() {
     { name: "JavaScript", icon: <JsIcon />, color: "text-yellow-400" },
     { name: "React", icon: <ReactIcon />, color: "text-cyan-300" },
     { name: "Node.js", icon: <NodeJsIcon />, color: "text-green-500" },
-    { name: "Express", icon: <ExpressJsIcon />, color: "text-gray-300" },
+    { name: "Express", icon: <ExpressJsIcon />, color: "secondary-text" },
     { name: "MongoDB", icon: <MongoDBIcon />, color: "text-green-500" },
     { name: "PostgreSQL", icon: <PgSqlIcon />, color: "text-blue-500" },
     // { name: "Python", icon: "🐍", color: "text-yellow-300" },
     { name: "TypeScript", icon: <TypeScriptIcon />, color: "text-blue-400" },
     // { name: "Vue.js", icon: "💚", color: "text-green-400" },
-    { name: "Next.js", icon: <NextJsIcon />, color: "text-white" },
+    { name: "Next.js", icon: <NextJsIcon />, color: "secondary-text" },
     { name: "Docker", icon: <DockerIcon />, color: "text-blue-400" },
-    { name: "AWS", icon: <AwsIcon />, color: "text-orange-300" },
-    { name: "Git", icon: <GitIcon />, color: "text-orange-400" },
+    { name: "AWS", icon: <AwsIcon />, color: "secondary-text" },
+    { name: "Git", icon: <GitIcon />, color: "secondary-text" },
     // { name: "Linux", icon: "🐧", color: "text-yellow-300" },
     // { name: "Redis", icon: "🔴", color: "text-red-400" },
     { name: "GraphQL", icon: <GraphQLIcon />, color: "text-pink-400" },
@@ -59,31 +56,29 @@ export default function SkillsCarousel() {
   const duplicatedSkills = [...skills, ...skills, ...skills];
 
   return (
-    <section className="my-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+    <section className="my-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text mb-6">
             {t("skill.title")} &{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-slate-400">
+            <span className="title-text">
               {t("skill.title2")}
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl secondary-text max-w-3xl mx-auto">
             {t("skill.description")}
           </p>
 
           {/* Decorative line */}
-          <div className="mt-8 flex justify-center">
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-slate-500 rounded-full"></div>
-          </div>
+          <HeadlineDivider />
         </div>
 
         {/* Infinite Scrolling Container */}
         <div className="relative">
           {/* Gradient overlays for smooth edges */}
-          <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 w-32 h-full skill-edge-right z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 w-32 h-full skill-edge-left z-10 pointer-events-none"></div>
 
           {/* Scrolling track */}
           <div className="flex overflow-hidden">
@@ -93,7 +88,7 @@ export default function SkillsCarousel() {
                   key={`${skill.name}-${index}`}
                   className="flex-shrink-0 group cursor-pointer"
                 >
-                  <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 w-32 h-32 flex flex-col items-center justify-center hover:bg-slate-700/50 hover:border-slate-600 hover:scale-110 transition-all duration-300 hover:shadow-2xl">
+                  <div className=" backdrop-blur-sm border border-slate-700 rounded-2xl p-6 w-32 h-32 flex flex-col items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-2xl">
                     {/* Icon */}
                     <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">
                       {skill.icon}
@@ -101,7 +96,7 @@ export default function SkillsCarousel() {
 
                     {/* Skill name */}
                     <span
-                      className={`text-sm font-semibold ${skill.color} group-hover:text-white transition-colors duration-300`}
+                      className={`text-sm font-semibold ${skill.color} transition-colors duration-300`}
                     >
                       {skill.name}
                     </span>
@@ -114,28 +109,22 @@ export default function SkillsCarousel() {
 
         {/* Additional Skills Categories */}
         <div className="mt-16 grid md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700 hover:bg-slate-700/30 transition-all duration-300">
-            <Monitor className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">{t("skill.frontend.title")}</h3>
-            <p className="text-gray-400">
-              {t("skill.frontend.description")}
-            </p>
+          <div className="skill-card">
+            <Monitor className="skill-icon skill-icon-blue" />
+            <h3 className="skill-title">{t("skill.frontend.title")}</h3>
+            <p className="skill-desc">{t("skill.frontend.description")}</p>
           </div>
 
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700 hover:bg-slate-700/30 transition-all duration-300">
-            <Server className="w-12 h-12 text-green-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">{t("skill.backend.title")}</h3>
-            <p className="text-gray-400">
-              {t("skill.backend.description")}
-            </p>
+          <div className="skill-card">
+            <Server className="skill-icon skill-icon-green" />
+            <h3 className="skill-title">{t("skill.backend.title")}</h3>
+            <p className="skill-desc">{t("skill.backend.description")}</p>
           </div>
 
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700 hover:bg-slate-700/30 transition-all duration-300">
-            <Cloud className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">{t("skill.cloud.title")}</h3>
-            <p className="text-gray-400">
-              {t("skill.cloud.description")}
-            </p>
+          <div className="skill-card">
+            <Cloud className="skill-icon skill-icon-purple" />
+            <h3 className="skill-title">{t("skill.cloud.title")}</h3>
+            <p className="skill-desc">{t("skill.cloud.description")}</p>
           </div>
         </div>
       </div>

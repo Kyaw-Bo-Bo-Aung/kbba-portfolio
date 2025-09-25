@@ -5,12 +5,14 @@ import HeroSection from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
 import PortfolioWebsites from "@/components/Portfolios";
 import SkillsCarousel from "@/components/SkillSection";
+import ThemeButton from "@/components/ThemeButton";
 
 export default function Home() {
   return (
     <>
-      <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
+      <div className="background">
         <Navigation />
+        <ThemeButton />
         <div id="hero">
           <HeroSection />
         </div>

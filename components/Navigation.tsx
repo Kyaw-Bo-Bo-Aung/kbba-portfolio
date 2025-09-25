@@ -101,7 +101,7 @@ export default function Navigation() {
                     onClick={() => scrollToSection(section.id)}
                     className={`group relative flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-300 ${
                       isActive
-                        ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-110"
+                        ? "btn-action shadow-lg scale-110"
                         : "bg-slate-700/50 text-gray-400 hover:bg-slate-600/50 hover:text-white hover:scale-105"
                     }`}
                     title={section.label}
@@ -192,7 +192,7 @@ export default function Navigation() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 z-40 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center hover:scale-110 hover:shadow-purple-500/25 ${
+        className={`fixed bottom-6 right-6 z-40 w-12 h-12  action-bg text-white rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center hover:scale-110 hover:shadow-purple-500/25 ${
           showScrollTop
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 translate-y-4 pointer-events-none"

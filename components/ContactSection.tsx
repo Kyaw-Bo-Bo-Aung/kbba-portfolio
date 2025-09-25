@@ -9,6 +9,7 @@ import {
   AlertCircle,
   User,
 } from "lucide-react";
+import HeadlineDivider from "./common/HeadlineDivider";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -63,31 +64,29 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-white">
+          <h2 className="text-4xl font-bold text">
             Get in{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <span className="title-text">
               Touch
             </span>
           </h2>
-          <p className="text-gray-400 text-sm mt-2">
+          <p className="secondary-text text-sm mt-2">
             I’d love to hear from you — let’s build something great together.
           </p>
+          <HeadlineDivider />
         </div>
 
         {/* 2 Columns */}
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Contact Info */}
           <div className="space-y-4">
-            <a
-              href={`mailto:${contactInfo.email}`}
-              className="flex items-center p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-700/50 transition"
-            >
-              <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-red-500 to-pink-500 rounded-md mr-3">
-                <Mail className="w-5 h-5 text-white" />
+            <a href={`mailto:${contactInfo.email}`} className="contact-card">
+              <div className="contact-icon bg-gradient-to-r from-red-500 to-pink-500">
+                <Mail className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-white text-sm font-semibold">Email</h4>
-                <p className="text-gray-400 text-xs">{contactInfo.email}</p>
+                <h4>Email</h4>
+                <p>{contactInfo.email}</p>
               </div>
             </a>
 
@@ -95,14 +94,14 @@ export default function ContactSection() {
               href={contactInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-700/50 transition"
+              className="contact-card"
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-gray-700 to-gray-900 rounded-md mr-3">
-                <Github className="w-5 h-5 text-white" />
+              <div className="contact-icon bg-gradient-to-r from-gray-700 to-gray-900">
+                <Github className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-white text-sm font-semibold">GitHub</h4>
-                <p className="text-gray-400 text-xs">Repositories & projects</p>
+                <h4>GitHub</h4>
+                <p>Repositories & projects</p>
               </div>
             </a>
 
@@ -110,27 +109,22 @@ export default function ContactSection() {
               href={contactInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-700/50 transition"
+              className="contact-card"
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 rounded-md mr-3">
-                <Linkedin className="w-5 h-5 text-white" />
+              <div className="contact-icon bg-gradient-to-r from-blue-500 to-blue-600">
+                <Linkedin className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-white text-sm font-semibold">LinkedIn</h4>
-                <p className="text-gray-400 text-xs">Professional networking</p>
+                <h4>LinkedIn</h4>
+                <p>Professional networking</p>
               </div>
             </a>
           </div>
 
           {/* Contact Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4"
-          >
+          <form onSubmit={handleSubmit} className="contact-form">
             <div>
-              <label className="block text-xs font-semibold text-gray-300 mb-1">
-                Name
-              </label>
+              <label className="contact-label">Name</label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
@@ -138,16 +132,14 @@ export default function ContactSection() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full pl-9 pr-3 py-2 text-sm bg-slate-700/50 border border-slate-600 rounded-md text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500/40"
                   placeholder="Enter your name"
+                  className="contact-input contact-input-with-icon"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-gray-300 mb-1">
-                Email
-              </label>
+              <label className="contact-label">Email</label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
@@ -155,47 +147,43 @@ export default function ContactSection() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full pl-9 pr-3 py-2 text-sm bg-slate-700/50 border border-slate-600 rounded-md text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500/40"
                   placeholder="Enter your email"
+                  className="contact-input contact-input-with-icon"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-gray-300 mb-1">
-                Subject
-              </label>
+              <label className="contact-label">Subject</label>
               <input
                 type="text"
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 text-sm bg-slate-700/50 border border-slate-600 rounded-md text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500/40"
                 placeholder="What's this about?"
+                className="contact-input"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-gray-300 mb-1">
-                Message
-              </label>
+              <label className="contact-label">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full px-3 py-2 text-sm bg-slate-700/50 border border-slate-600 rounded-md text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500/40 resize-none"
                 placeholder="Tell me about your project..."
+                className="contact-input resize-none"
               />
             </div>
 
             <button
               type="submit"
               disabled={!isFormValid || isSubmitting}
-              className={`w-full py-2 px-4 text-sm rounded-md font-semibold flex items-center justify-center transition ${
+              className={`contact-submit ${
                 isFormValid && !isSubmitting
-                  ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600"
-                  : "bg-slate-700 text-gray-400 cursor-not-allowed"
+                  ? "contact-submit-enabled"
+                  : "contact-submit-disabled"
               }`}
             >
               {isSubmitting ? (
@@ -213,10 +201,10 @@ export default function ContactSection() {
 
             {submitStatus && (
               <div
-                className={`mt-3 p-2 rounded-md flex items-center text-sm ${
+                className={`contact-status ${
                   submitStatus === "success"
-                    ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                    : "bg-red-500/10 border border-red-500/20 text-red-400"
+                    ? "contact-status-success"
+                    : "contact-status-error"
                 }`}
               >
                 {submitStatus === "success" ? (

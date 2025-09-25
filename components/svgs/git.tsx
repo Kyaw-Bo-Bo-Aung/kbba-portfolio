@@ -18,7 +18,7 @@ const GitIcon = () => {
       >
         <g
           transform="translate(-140.000000, -7559.000000)"
-          fill="#dddddd"
+          className="skill-logo-color"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path

@@ -53,60 +53,57 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             {/* Name */}
-            <h1 className="text-5xl lg:text-7xl text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-400 to-slate-400 leading-tight">
+            <h1 className="text-5xl lg:text-7xl hero-tile leading-tight">
               {t("name.first")}
             </h1>
 
             {/* Animated Role */}
             <div className="h-12 flex flex-col">
-              <span className="text-2xl lg:text-3xl text-gray-300 mr-2">
+              <span className="text-2xl lg:text-3xl secondary-text mr-2">
                 {t("hero.iam")}
               </span>
-              <span className="text-2xl lg:text-3xl font-semibold text-emerald-400 min-w-max">
+              <span className="text-2xl lg:text-3xl font-semibold running-text min-w-max">
                 {displayText}
                 <span className="animate-pulse">|</span>
               </span>
             </div>
 
             {/* Description */}
-            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">
+            <p className="text-lg text leading-relaxed max-w-2xl">
               {t("hero.description")}
             </p>
 
             {/* Skills */}
-            <div className="flex flex-col space-y-3 md:flex-row md:space-x-6 md:space-y-0 text-gray-400">
-              <div className="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-lg">
-                <Monitor className="w-5 h-5 text-blue-400" />
-                <span className="text-sm">{t("hero.skills.frontend")}</span>
+            <div className="flex flex-col space-y-3 md:flex-row md:space-x-6 md:space-y-0">
+              <div className="skill-badge">
+                <Monitor className="w-5 h-5 skill-icon-blue" />
+                <span>{t("hero.skills.frontend")}</span>
               </div>
-              <div className="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-lg">
-                <Database className="w-5 h-5 text-green-400" />
-                <span className="text-sm">{t("hero.skills.backend")}</span>
+              <div className="skill-badge">
+                <Database className="w-5 h-5 skill-icon-green" />
+                <span>{t("hero.skills.backend")}</span>
               </div>
-              <div className="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-lg">
-                <Code className="w-5 h-5 text-purple-400" />
-                <span className="text-sm">{t("hero.skills.fullstack")}</span>
+              <div className="skill-badge">
+                <Code className="w-5 h-5 skill-icon-purple" />
+                <span>{t("hero.skills.fullstack")}</span>
               </div>
             </div>
 
             {/* Availability */}
-            <div className="flex items-center space-x-4 text-gray-400">
+            <div className="flex items-center space-x-4 secondary-text">
               <MapPin className="w-5 h-5 text-red-400" />
               <span>{t("hero.availability")}</span>
             </div>
 
             {/* Buttons */}
             <div className="flex gap-4">
-              <button
-                className="bg-gradient-to-r from-blue-500 to-slate-500 text-white px-8 py-3 rounded-lg font-semibold cursor-pointer
-             transition-all duration-300 transform hover:shadow-lg hover:from-blue-600 hover:to-slate-600"
-              >
+              <button className="btn-action px-8 py-3">
                 {t("hero.buttons.work")}
               </button>
 
               <button
-                className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold cursor-pointer
-             transition-all duration-300 transform hover:bg-gray-800 hover:border-gray-500 hover:text-white"
+                className="border border-gray-600 text-gray-400 px-8 py-3 rounded-lg font-semibold cursor-pointer
+           transition-colors duration-300 hover:bg-gray-700 hover:border-gray-500 hover:text-white"
               >
                 {t("hero.buttons.contact")}
               </button>
@@ -175,7 +172,7 @@ export default function HeroSection() {
         </div>
 
         {/* 🌍 Language Switcher */}
-        <div className="mt-8 flex gap-3">
+        <div className="mt-8 flex gap-3 text">
           <button onClick={() => i18n.changeLanguage("en")}>🇺🇸 EN</button>
           <button onClick={() => i18n.changeLanguage("mm")}>🇲🇲 MM</button>
           <button onClick={() => i18n.changeLanguage("th")}>🇹🇭 TH</button>

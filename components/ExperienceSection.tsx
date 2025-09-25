@@ -1,6 +1,7 @@
-'use client';
-import { MapPin, Calendar, Briefcase, Building } from 'lucide-react';
-import { motion } from 'framer-motion';
+"use client";
+import { MapPin, Calendar, Briefcase, Building } from "lucide-react";
+import { motion } from "framer-motion";
+import HeadlineDivider from "./common/HeadlineDivider";
 
 export default function ExperienceTimeline() {
   const experiences = [
@@ -10,8 +11,13 @@ export default function ExperienceTimeline() {
       company: "Tech Innovations Inc.",
       location: "San Francisco, CA",
       duration: "Jan 2023 - Present",
-      description: "Led development of scalable web applications using React, Node.js, and cloud technologies. Mentored junior developers and architected microservices infrastructure.",
-      achievements: ["Improved app performance by 40%", "Led team of 5 developers", "Implemented CI/CD pipeline"]
+      description:
+        "Led development of scalable web applications using React, Node.js, and cloud technologies. Mentored junior developers and architected microservices infrastructure.",
+      achievements: [
+        "Improved app performance by 40%",
+        "Led team of 5 developers",
+        "Implemented CI/CD pipeline",
+      ],
     },
     {
       id: 2,
@@ -19,8 +25,13 @@ export default function ExperienceTimeline() {
       company: "Digital Solutions Co.",
       location: "New York, NY",
       duration: "Mar 2021 - Dec 2022",
-      description: "Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to create responsive user interfaces.",
-      achievements: ["Delivered 15+ successful projects", "Reduced load times by 60%", "Mentored 3 junior developers"]
+      description:
+        "Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to create responsive user interfaces.",
+      achievements: [
+        "Delivered 15+ successful projects",
+        "Reduced load times by 60%",
+        "Mentored 3 junior developers",
+      ],
     },
     {
       id: 3,
@@ -28,8 +39,13 @@ export default function ExperienceTimeline() {
       company: "Creative Web Studio",
       location: "Austin, TX",
       duration: "Jun 2019 - Feb 2021",
-      description: "Specialized in creating interactive user experiences with React and Vue.js. Worked closely with UX designers to implement pixel-perfect designs.",
-      achievements: ["Built 20+ responsive websites", "Improved user engagement by 35%", "Mastered modern CSS frameworks"]
+      description:
+        "Specialized in creating interactive user experiences with React and Vue.js. Worked closely with UX designers to implement pixel-perfect designs.",
+      achievements: [
+        "Built 20+ responsive websites",
+        "Improved user engagement by 35%",
+        "Mastered modern CSS frameworks",
+      ],
     },
     {
       id: 4,
@@ -37,9 +53,14 @@ export default function ExperienceTimeline() {
       company: "StartUp Ventures",
       location: "Seattle, WA",
       duration: "Aug 2018 - May 2019",
-      description: "Started career developing web applications and learning modern development practices. Gained experience in both frontend and backend technologies.",
-      achievements: ["Completed 10+ web projects", "Learned React and Node.js", "Contributed to open source projects"]
-    }
+      description:
+        "Started career developing web applications and learning modern development practices. Gained experience in both frontend and backend technologies.",
+      achievements: [
+        "Completed 10+ web projects",
+        "Learned React and Node.js",
+        "Contributed to open source projects",
+      ],
+    },
   ];
 
   return (
@@ -47,19 +68,18 @@ export default function ExperienceTimeline() {
       <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Professional{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+          <h2 className="text text-4xl font-bold mb-6">
+            Professional{" "}
+          <span className="title-text">
               Experience
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            My journey through various roles and the impact I&apos;ve made along the way
+          <p className="secondary-text text-xl max-w-3xl mx-auto">
+            My journey through various roles and the impact I&apos;ve made along
+            the way
           </p>
 
-          <div className="mt-8 flex justify-center">
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-          </div>
+          <HeadlineDivider />
         </div>
 
         {/* Timeline Container */}
@@ -78,69 +98,71 @@ export default function ExperienceTimeline() {
                 <motion.div
                   key={experience.id}
                   className={`relative flex flex-col md:flex-row items-center ${
-                    isEven ? 'md:flex-row-reverse' : ''
+                    isEven ? "md:flex-row-reverse" : ""
                   }`}
                   initial={{ opacity: 0, x: isEven ? 80 : -80 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, ease: 'easeOut' }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
                   viewport={{ once: true, amount: 0.2 }}
                 >
                   {/* Timeline Dot */}
                   <div
                     className={`hidden md:block absolute ${
-                      isEven ? 'md:left-1/2 left-8' : 'md:left-1/2 left-8'
+                      isEven ? "md:left-1/2 left-8" : "md:left-1/2 left-8"
                     } transform md:-translate-x-1/2 -translate-x-1/2 z-20`}
                   >
                     <div className="w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full border-4 border-slate-900 shadow-lg"></div>
                   </div>
 
                   {/* Card */}
-                  <div className={`w-full md:w-5/12 md:ml-0`}>
-                    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 hover:bg-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl group relative">
+                  <div className="w-full md:w-5/12 md:ml-0">
+                    <div className="experience-card group">
                       {/* Header */}
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
-                          <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
+                          <h3 className="experience-title">
                             {experience.title}
                           </h3>
-                          <div className="flex items-center text-emerald-400 mt-1">
+                          <div className="experience-company text-emerald-400">
                             <Building className="w-4 h-4 mr-2" />
-                            <span className="font-semibold">{experience.company}</span>
+                            <span>{experience.company}</span>
                           </div>
                         </div>
                         <Briefcase className="w-6 h-6 text-purple-400 flex-shrink-0 ml-4" />
                       </div>
 
-                      {/* Duration and Location */}
-                      <div className="flex flex-wrap gap-4 mb-4 text-sm">
-                        <div className="flex items-center text-gray-300">
+                      {/* Duration & Location */}
+                      <div className="experience-meta">
+                        <div className="experience-meta-item">
                           <Calendar className="w-4 h-4 mr-2 text-pink-400" />
                           <span>{experience.duration}</span>
                         </div>
-                        <div className="flex items-center text-gray-300">
+                        <div className="experience-meta-item">
                           <MapPin className="w-4 h-4 mr-2 text-red-400" />
                           <span>{experience.location}</span>
                         </div>
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-300 mb-4 leading-relaxed">{experience.description}</p>
+                      <p className="experience-desc">
+                        {experience.description}
+                      </p>
 
                       {/* Achievements */}
-                      <div className="space-y-2">
-                        <h4 className="text-sm font-semibold text-purple-300">Key Achievements:</h4>
+                      <div className="experience-achievements space-y-2">
+                        <h4>Key Achievements:</h4>
                         <ul className="space-y-1">
                           {experience.achievements.map((ach, idx) => (
-                            <li key={idx} className="text-sm text-gray-400 flex items-start">
-                              <span className="text-emerald-400 mr-2">•</span>
+                            <li key={idx}>
+                              <span>•</span>
                               {ach}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      {/* Glow */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                      {/* Glow Layer */}
+                      <div className="experience-card-glow"></div>
                     </div>
                   </div>
 
