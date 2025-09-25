@@ -9,7 +9,6 @@ import {
   ChevronUp,
   Menu,
   X,
-  School,
   Star,
 } from "lucide-react";
 
@@ -85,40 +84,28 @@ export default function Navigation() {
     <>
       {/* Desktop Floating Navigation */}
       <nav
-        className={`fixed top-1/2 right-6 transform -translate-y-1/2 z-50 hidden lg:block transition-all duration-300 ${
+        className={`nav-desktop ${
           isScrolled ? "opacity-100 scale-100" : "opacity-80 scale-95"
         }`}
       >
-        <div className="bg-slate-800/90 backdrop-blur-md border border-slate-600 rounded-2xl p-3 shadow-2xl">
-          <ul className="space-y-2">
+        <div className="nav-desktop-container space-y-2">
+          <ul>
             {sections.map((section) => {
               const Icon = section.icon;
               const isActive = activeSection === section.id;
-
               return (
                 <li key={section.id}>
                   <button
                     onClick={() => scrollToSection(section.id)}
-                    className={`group relative flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-300 ${
+                    className={`nav-desktop-btn ${
                       isActive
-                        ? "btn-action shadow-lg scale-110"
-                        : "bg-slate-700/50 text-gray-400 hover:bg-slate-600/50 hover:text-white hover:scale-105"
+                        ? "nav-desktop-btn-active"
+                        : "nav-desktop-btn-inactive"
                     }`}
                     title={section.label}
                   >
                     <Icon className="w-5 h-5" />
-
-                    {/* Tooltip */}
-                    <span
-                      className={`absolute right-full mr-3 px-3 py-1 bg-slate-900 text-white text-sm rounded-lg opacity-0 pointer-events-none transition-all duration-300 whitespace-nowrap ${
-                        isActive
-                          ? "group-hover:opacity-100"
-                          : "group-hover:opacity-100"
-                      }`}
-                    >
-                      {section.label}
-                      <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-slate-900 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
-                    </span>
+                    <span className="nav-tooltip">{section.label}</span>
                   </button>
                 </li>
               );
@@ -127,23 +114,20 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile Top Navigation Bar */}
+      {/* Mobile Top Navigation */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 lg:hidden transition-all duration-300 ${
-          isScrolled
-            ? "bg-slate-900/95 backdrop-blur-md border-b border-slate-700 shadow-lg"
-            : "bg-transparent"
+        className={`nav-mobile ${
+          isScrolled ? "nav-mobile-scrolled" : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo/Name */}
-            <div className="text-xl text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-400 to-slate-400 leading-tight">KBBA</div>
-
-            {/* Mobile Menu Button */}
+        <div className="nav-mobile-container">
+          <div className="nav-mobile-inner">
+            <div className="text-xl text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-400 to-slate-400">
+              KBBA
+            </div>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 bg-slate-800/50 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300"
+              className="nav-mobile-menu-btn"
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -153,12 +137,11 @@ export default function Navigation() {
             </button>
           </div>
 
-          {/* Mobile Menu Dropdown */}
           <div
-            className={`absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-slate-700 shadow-2xl transition-all duration-300 ${
+            className={`nav-mobile-dropdown ${
               isMobileMenuOpen
-                ? "opacity-100 translate-y-0 pointer-events-auto"
-                : "opacity-0 -translate-y-4 pointer-events-none"
+                ? "nav-mobile-dropdown-open"
+                : "nav-mobile-dropdown-closed"
             }`}
           >
             <div className="px-4 py-4">
@@ -166,15 +149,14 @@ export default function Navigation() {
                 {sections.map((section) => {
                   const Icon = section.icon;
                   const isActive = activeSection === section.id;
-
                   return (
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`w-full flex items-center px-4 py-3 rounded-xl text-left transition-all duration-300 ${
+                        className={`nav-mobile-link ${
                           isActive
-                            ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg"
-                            : "bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white"
+                            ? "nav-mobile-link-active"
+                            : "nav-mobile-link-inactive"
                         }`}
                       >
                         <Icon className="w-5 h-5 mr-3" />
@@ -189,13 +171,11 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Scroll to Top Button */}
+      {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 z-40 w-12 h-12  action-bg text-white rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center hover:scale-110 hover:shadow-purple-500/25 ${
-          showScrollTop
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 translate-y-4 pointer-events-none"
+        className={`scroll-top-btn action-bg ${
+          showScrollTop ? "scroll-top-visible" : "scroll-top-hidden"
         }`}
         title="Back to top"
       >

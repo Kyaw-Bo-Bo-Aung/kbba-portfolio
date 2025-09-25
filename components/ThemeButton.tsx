@@ -25,7 +25,7 @@ export default function ThemeButton() {
     // >
     <button
       onClick={() => setIsDark(!isDark)}
-      className={`fixed top-6 right-6 z-40 w-12 h-12 action-bg text-white rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center hover:scale-110 hover:shadow-purple-500/25`}
+      className={`fixed top-2.5 right-16 z-100 lg:top-6 lg:right-6 w-12 h-12 action-bg text-white rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center hover:scale-110 hover:shadow-purple-500/25`}
       title="Back to top"
     >
       {isDark ? <Sun /> : <Moon />}

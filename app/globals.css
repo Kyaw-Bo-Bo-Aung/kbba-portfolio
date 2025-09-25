@@ -534,3 +534,137 @@
 .dark .contact-status-error {
   @apply text-red-400;
 }
+
+/* ---------------------- */
+/* Desktop Floating Nav   */
+/* ---------------------- */
+.nav-desktop {
+  @apply fixed top-1/2 right-6 transform -translate-y-1/2 z-50 hidden lg:block transition-all duration-300;
+}
+
+.nav-desktop-container {
+  @apply rounded-2xl p-3 shadow-2xl backdrop-blur-md border space-y-2;
+  @apply border-slate-200 bg-transparent; /* Light */
+}
+.dark .nav-desktop-container {
+  @apply bg-slate-800/90 border-slate-600; /* Dark */
+}
+
+.nav-desktop-btn {
+  @apply relative my-2 flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-300;
+}
+
+.nav-desktop-btn-active {
+  @apply shadow-lg scale-110 text-white;
+  @apply bg-gradient-to-r from-blue-400 to-slate-400; /* Light */
+}
+.dark .nav-desktop-btn-active {
+  @apply bg-gradient-to-r from-purple-500 to-pink-500; /* Dark */
+}
+
+.nav-desktop-btn-inactive {
+  @apply hover:scale-105;
+  @apply bg-slate-100 text-gray-600 hover:bg-slate-200 hover:text-black; /* Light */
+}
+.dark .nav-desktop-btn-inactive {
+  @apply bg-slate-700/50 text-gray-400 hover:bg-slate-600/50 hover:text-white; /* Dark */
+}
+
+/* Tooltip */
+.nav-tooltip {
+  @apply absolute right-full mr-3 px-3 py-1 text-sm rounded-lg opacity-0 pointer-events-none transition-all duration-300 whitespace-nowrap;
+  @apply bg-slate-200 text-gray-900; /* Light */
+}
+.dark .nav-tooltip {
+  @apply bg-slate-900 text-white; /* Dark */
+}
+.group:hover .nav-tooltip {
+  @apply opacity-100;
+}
+.nav-tooltip::after {
+  content: '';
+  @apply absolute left-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent;
+  @apply border-l-slate-200; /* Light */
+}
+.dark .nav-tooltip::after {
+  @apply border-l-slate-900; /* Dark */
+}
+
+/* ---------------------- */
+/* Mobile Top Navigation  */
+/* ---------------------- */
+.nav-mobile {
+  @apply fixed top-0 left-0 right-0 z-50 lg:hidden transition-all duration-300;
+}
+
+.nav-mobile-scrolled {
+  @apply backdrop-blur-md border-b shadow-lg;
+  @apply bg-slate-50/95 border-slate-200; /* Light */
+}
+.dark .nav-mobile-scrolled {
+  @apply bg-slate-900/95 border-slate-700; /* Dark */
+}
+
+.nav-mobile-container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+.nav-mobile-inner {
+  @apply flex items-center justify-between h-16;
+}
+
+.nav-mobile-menu-btn {
+  @apply p-2 rounded-lg transition-all duration-300;
+  @apply bg-slate-100 text-gray-600 hover:bg-slate-200 hover:text-black; /* Light */
+}
+.dark .nav-mobile-menu-btn {
+  @apply bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white; /* Dark */
+}
+
+.nav-mobile-dropdown {
+  @apply absolute top-full left-0 right-0 backdrop-blur-md border-b shadow-2xl transition-all duration-300;
+  @apply bg-slate-50/95 border-slate-200; /* Light */
+}
+.dark .nav-mobile-dropdown {
+  @apply bg-slate-900/95 border-slate-700; /* Dark */
+}
+.nav-mobile-dropdown-open {
+  @apply opacity-100 translate-y-0 pointer-events-auto;
+}
+.nav-mobile-dropdown-closed {
+  @apply opacity-0 -translate-y-4 pointer-events-none;
+}
+
+.nav-mobile-link {
+  @apply w-full flex items-center px-4 py-3 rounded-xl text-left transition-all duration-300;
+  @apply bg-slate-100 text-gray-700 hover:bg-slate-200 hover:text-black; /* Light */
+}
+.dark .nav-mobile-link {
+  @apply bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white; /* Dark */
+}
+
+.nav-mobile-link-active {
+  @apply text-white shadow-lg;
+  @apply bg-gradient-to-r from-blue-400 to-slate-400; /* Light */
+}
+.dark .nav-mobile-link-active {
+  @apply bg-gradient-to-r from-purple-500 to-pink-500; /* Dark */
+}
+
+/* ---------------------- */
+/* Scroll To Top Button   */
+/* ---------------------- */
+.scroll-top-btn {
+  @apply fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center;
+  @apply bg-blue-500 text-white hover:scale-110 hover:shadow-blue-500/25; /* Light */
+}
+.dark .scroll-top-btn {
+  @apply bg-purple-500 text-white hover:scale-110 hover:shadow-purple-500/25; /* Dark */
+}
+
+.scroll-top-visible {
+  @apply opacity-100 translate-y-0 pointer-events-auto;
+}
+.scroll-top-hidden {
+  @apply opacity-0 translate-y-4 pointer-events-none;
+}
