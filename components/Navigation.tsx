@@ -179,7 +179,7 @@ export default function Navigation() {
         }`}
         title="Back to top"
       >
-        <ChevronUp className="w-6 h-6" />
+        <ChevronUp className="w-5 h-5" />
       </button>
     </>
   );

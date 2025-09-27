@@ -47,5 +47,140 @@
       "title": "Cloud",
       "description": "ไมโครเซอร์วิส, การนำไปใช้บนคลาวด์, Docker และ CI/CD pipelines"
     }
+  },
+  "experience": {
+    "title": "ประสบการณ์",
+    "title2": "การทำงาน",
+    "subtitle": "เส้นทางในบทบาทต่างๆ และผลงานที่สร้างขึ้นตลอดการเดินทาง",
+    "achievements": "ผลงานที่สำคัญ:"
+  },
+  "items": [
+    {
+      "title": "วิศวกรซอฟต์แวร์อาวุโส",
+      "company": "AirRetailer Technology LLC",
+      "location": "Dubai, United Arab Emirates",
+      "duration": "Jun 2024 – Present",
+      "description": "พัฒนาและดูแลแพลตฟอร์มจองการเดินทางที่มีปริมาณสูง โดยใช้ Next.js, React.js และ Node.js BFF พร้อมทั้งสร้างและเชื่อมต่อ Java Spring Boot microservices เพื่อรองรับโมดูลที่สำคัญทางธุรกิจสำหรับเที่ยวบิน โรงแรม และรถยนต์",
+      "achievements": [
+        "ปรับปรุงประสิทธิภาพการนำทาง 30% ด้วยการปรับโครงสร้างคอมโพเนนต์ React",
+        "ลดการ re-render ที่ไม่จำเป็นลง 25% เพื่อความสามารถในการขยายตัว",
+        "ปรับปรุงการรวมข้อมูล API ของแบ็กเอนด์ ลดความล่าช้าของข้อมูลลง 20%",
+        "ร่วมมือกับทีมผลิตภัณฑ์เพื่อส่งมอบการปรับปรุง UX และเวิร์กโฟลว์"
+      ]
+    },
+    {
+      "title": "นักพัฒนาแบ็กเอนด์อาวุโส",
+      "company": "Illuvium Co., Ltd",
+      "location": "Yangon, Myanmar",
+      "duration": "Dec 2023 – Feb 2024",
+      "description": "พัฒนาและปรับปรุงระบบแบ็กเอนด์ด้วย Java (Spring Boot) โดยเน้นคุณสมบัติแบบเรียลไทม์และความเสถียรของระบบ",
+      "achievements": [
+        "ปรับปรุงประสิทธิภาพระบบเรียลไทม์ 35% ด้วยการจัดการ WebSocket ที่เหมาะสม",
+        "ปรับโครงสร้างโค้ดเก่าเป็นบริการแบบโมดูลาร์เพื่อให้ง่ายต่อการบำรุงรักษา",
+        "ลดช่วงเวลาที่ระบบล่มด้วยการแก้ไขปัญหาคอขวดที่สำคัญในระบบเก่า"
+      ]
+    },
+    {
+      "title": "วิศวกรซอฟต์แวร์ (Full-Stack)",
+      "company": "CGM Golden Land Co., Ltd",
+      "location": "Yangon, Myanmar",
+      "duration": "Feb 2022 – May 2023",
+      "description": "สร้างและติดตั้งระบบ HR & Accounting ด้วย React.js และ Node.js พร้อมบูรณาการระบบอัตโนมัติเพื่อปรับปรุงเวิร์กโฟลว์ขององค์กร",
+      "achievements": [
+        "เพิ่มประสิทธิภาพการทำงานของฝ่ายบุคคล 30% ผ่านระบบอัตโนมัติ",
+        "ลดข้อผิดพลาดในการลงเวลาทำงาน 40% ด้วยระบบลงเวลาผ่าน QR code",
+        "เพิ่มความเร็วในการตอบสนองของแอปพลิเคชัน 25% ด้วยการแก้ไขปัญหา N+1 queries"
+      ]
+    },
+    {
+      "title": "นักพัฒนา Full-Stack อิสระ",
+      "company": "Self-employed",
+      "location": "Remote",
+      "duration": "2021 – 2022",
+      "description": "ส่งมอบโซลูชันธุรกิจที่ปรับแต่งตามความต้องการของลูกค้า โดยเน้นที่แดชบอร์ด, เครื่องมือ CRM และระบบจัดการสต็อก",
+      "achievements": [
+        "ออกแบบแดชบอร์ดสำหรับสินค้าคงคลัง คำสั่งซื้อ และรายงาน",
+        "ใช้งานการเข้าถึงตามบทบาท (role-based access) เพื่อความปลอดภัยและการรองรับการขยายตัว",
+        "สร้างแดชบอร์ดวิเคราะห์ที่ช่วยในการตัดสินใจโดยใช้ข้อมูล"
+      ]
+    }
+  ],
+  "education": {
+    "sectionTitle": "การศึกษา",
+    "list": [
+      {
+        "degree": "Bachelor of Engineering",
+        "school": "Yangon Technological University",
+        "location": "Yangon, Myanmar",
+        "duration": "2014 – 2020"
+      }
+    ]
+  },
+  "certificates": {
+    "sectionTitle": "ใบรับรอง",
+    "list": [
+      {
+        "title": "Meta Front-End Developer Professional Certificate",
+        "provider": "Meta (Facebook)"
+      },
+      {
+        "title": "Java EE Spring",
+        "provider": "Turing Training Center"
+      },
+      {
+        "title": "JavaScript: Basics to Advanced",
+        "provider": "EdYoda Digital University"
+      },
+      {
+        "title": "IBM Full-Stack Developer Certificate",
+        "provider": "IBM"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "ติดต่อ",
+    "sectionTitle2": "ฉัน",
+    "subtitle": "อยากร่วมงานกับคุณ — มาสร้างสรรค์สิ่งดีๆ ไปด้วยกันเถอะ",
+    "info": {
+      "email": {
+        "label": "อีเมล",
+        "description": "ส่งอีเมลถึงฉันโดยตรง"
+      },
+      "github": {
+        "label": "GitHub",
+        "description": "คลังโปรเจกต์และผลงาน"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "เครือข่ายมืออาชีพ"
+      }
+    },
+    "form": {
+      "name": {
+        "label": "ชื่อ",
+        "placeholder": "กรอกชื่อของคุณ"
+      },
+      "email": {
+        "label": "อีเมล",
+        "placeholder": "กรอกอีเมลของคุณ"
+      },
+      "subject": {
+        "label": "หัวข้อ",
+        "placeholder": "เกี่ยวกับอะไร?"
+      },
+      "message": {
+        "label": "ข้อความ",
+        "placeholder": "บอกฉันเกี่ยวกับโปรเจกต์ของคุณ..."
+      },
+      "submit": {
+        "enabled": "ส่งข้อความ",
+        "disabled": "โปรดกรอกข้อมูลให้ครบถ้วน"
+      },
+      "sending": "กำลังส่ง...",
+      "status": {
+        "success": "ส่งข้อความสำเร็จแล้ว!",
+        "error": "ส่งไม่สำเร็จ ลองใหม่อีกครั้ง"
+      }
+    }
   }
 }

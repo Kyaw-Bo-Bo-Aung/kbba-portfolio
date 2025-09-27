@@ -47,5 +47,140 @@
       "title": "Cloud",
       "description": "Microservices, Cloud deployment, Docker, and CI/CD pipelines"
     }
+  },
+  "experience": {
+    "title": "Professional",
+    "title2": "Experience",
+    "subtitle": "My journey through various roles and the impact I've made along the way",
+    "achievements": "Key Achievements:"
+  },
+  "items": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "AirRetailer Technology LLC",
+      "location": "Dubai, United Arab Emirates",
+      "duration": "Jun 2024 – Present",
+      "description": "Engineering and maintaining a high-volume travel booking platform using Next.js, React.js, and Node.js BFF, while building and integrating Java Spring Boot microservices to support business-critical modules across flights, hotels, and cars.",
+      "achievements": [
+        "Improved navigation performance by 30% through React component refactoring",
+        "Reduced unnecessary re-renders by 25% for scalability",
+        "Optimized backend API aggregation, cutting data latency by 20%",
+        "Collaborated with product teams to deliver UX and workflow improvements"
+      ]
+    },
+    {
+      "title": "Senior Backend Developer",
+      "company": "Illuvium Co., Ltd",
+      "location": "Yangon, Myanmar",
+      "duration": "Dec 2023 – Feb 2024",
+      "description": "Developed and optimized backend services using Java (Spring Boot) with a focus on real-time features and system stability.",
+      "achievements": [
+        "Improved real-time system efficiency by 35% with optimized WebSocket handling",
+        "Refactored legacy code into modular services for maintainability",
+        "Reduced downtime by resolving critical legacy bottlenecks"
+      ]
+    },
+    {
+      "title": "Software Engineer (Full-Stack)",
+      "company": "CGM Golden Land Co., Ltd",
+      "location": "Yangon, Myanmar",
+      "duration": "Feb 2022 – May 2023",
+      "description": "Built and deployed HR & Accounting systems with React.js and Node.js, integrating automation to improve organizational workflows.",
+      "achievements": [
+        "Increased HR productivity by 30% via system automation",
+        "Reduced attendance errors by 40% with QR code attendance system",
+        "Boosted app response time by 25% by fixing N+1 queries"
+      ]
+    },
+    {
+      "title": "Freelance Full-Stack Developer",
+      "company": "Self-employed",
+      "location": "Remote",
+      "duration": "2021 – 2022",
+      "description": "Delivered custom business solutions for clients, focusing on dashboards, CRM tools, and stock management systems.",
+      "achievements": [
+        "Designed inventory, order, and reporting dashboards",
+        "Implemented role-based access for security and scalability",
+        "Built analytics dashboards enabling data-driven decisions"
+      ]
+    }
+  ],
+  "education": {
+    "sectionTitle": "Education",
+    "list": [
+      {
+        "degree": "Bachelor of Engineering",
+        "school": "Yangon Technological University",
+        "location": "Yangon, Myanmar",
+        "duration": "2014 – 2020"
+      }
+    ]
+  },
+  "certificates": {
+    "sectionTitle": "Certifications",
+    "list": [
+      {
+        "title": "Meta Front-End Developer Professional Certificate",
+        "provider": "Meta (Facebook)"
+      },
+      {
+        "title": "Java EE Spring",
+        "provider": "Turing Training Center"
+      },
+      {
+        "title": "JavaScript: Basics to Advanced",
+        "provider": "EdYoda Digital University"
+      },
+      {
+        "title": "IBM Full-Stack Developer Certificate",
+        "provider": "IBM"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Get in",
+    "sectionTitle2": "Touch",
+    "subtitle": "I’d love to hear from you — let’s build something great together.",
+    "info": {
+      "email": {
+        "label": "Email",
+        "description": "Send me an email directly"
+      },
+      "github": {
+        "label": "GitHub",
+        "description": "Repositories & projects"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "Professional networking"
+      }
+    },
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "What's this about?"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell me about your project..."
+      },
+      "submit": {
+        "enabled": "Send Message",
+        "disabled": "Please fill out all fields"
+      },
+      "sending": "Sending...",
+      "status": {
+        "success": "Message sent successfully!",
+        "error": "Failed to send. Try again."
+      }
+    }
   }
 }

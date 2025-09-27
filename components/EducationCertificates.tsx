@@ -1,60 +1,26 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
+import { useTranslation } from "react-i18next";
 import { GraduationCap, Award, Calendar, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import HeadlineDivider from "./common/HeadlineDivider";
 
 export default function EducationCertificates() {
-  const education = [
-    {
-      id: 1,
-      degree: "Bachelor of Computer Science",
-      school: "University of Technology",
-      location: "New York, NY",
-      duration: "2014 - 2018",
-    },
-    {
-      id: 2,
-      degree: "Master of Software Engineering",
-      school: "Tech Institute of Excellence",
-      location: "San Francisco, CA",
-      duration: "2018 - 2020",
-    },
-  ];
+  const { t } = useTranslation();
 
-  const certificates = [
-    {
-      id: 1,
-      title: "AWS Solutions Architect Professional",
-      provider: "Amazon Web Services",
-    },
-    {
-      id: 2,
-      title: "Google Cloud Professional Developer",
-      provider: "Google Cloud Platform",
-    },
-    { id: 3, title: "React Developer Certification", provider: "Meta" },
-    {
-      id: 4,
-      title: "Node.js Application Development",
-      provider: "Linux Foundation",
-    },
-    {
-      id: 5,
-      title: "MongoDB Certified Developer",
-      provider: "MongoDB University",
-    },
-    { id: 6, title: "Docker Certified Associate", provider: "Docker Inc." },
-  ];
+  const education = t("education.list", { returnObjects: true }) as any;
+  const certificates = t("certificates.list", { returnObjects: true }) as any;
 
   return (
     <section className="my-20 from-slate-800 to-slate-900">
       <div className="max-w-6xl mx-auto px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text mb-4">
-            Education & <span className="title-text">Certifications</span>
+          <h2 className="text-3xl text font-bold mb-4">
+            {t("education.sectionTitle")} &{" "}
+            <span className="title-text">{t("certificates.sectionTitle")}</span>
           </h2>
-          <HeadlineDivider />{" "}
+          <HeadlineDivider />
         </div>
 
         <div className="grid gap-12">
@@ -62,13 +28,15 @@ export default function EducationCertificates() {
           <div>
             <div className="flex items-center mb-6">
               <GraduationCap className="w-6 h-6 text-purple-400 mr-3" />
-              <h3 className="text-2xl font-bold secondary-text">Education</h3>
+              <h3 className="text-xl font-bold secondary-text">
+                {t("education.sectionTitle")}
+              </h3>
             </div>
 
             <div className="space-y-4">
-              {education.map((edu, index) => (
+              {education.map((edu: any, index: number) => (
                 <motion.div
-                  key={edu.id}
+                  key={index}
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
@@ -77,7 +45,6 @@ export default function EducationCertificates() {
                 >
                   <h4 className="education-title">{edu.degree}</h4>
                   <p className="education-school">{edu.school}</p>
-
                   <div className="education-meta">
                     <div className="education-meta-item">
                       <Calendar className="w-4 h-4 mr-2 text-pink-400" />
@@ -97,13 +64,15 @@ export default function EducationCertificates() {
           <div>
             <div className="flex items-center mb-6">
               <Award className="w-6 h-6 text-orange-400 mr-3" />
-              <h3 className="text-2xl font-bold text">Certifications</h3>
+              <h3 className="text-xl font-bold text">
+                {t("certificates.sectionTitle")}
+              </h3>
             </div>
 
             <div className="space-y-3">
-              {certificates.map((cert, index) => (
+              {certificates.map((cert: any, index: number) => (
                 <motion.div
-                  key={cert.id}
+                  key={index}
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.2 }}

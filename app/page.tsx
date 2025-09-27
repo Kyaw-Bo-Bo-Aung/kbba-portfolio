@@ -10,7 +10,7 @@ import ThemeButton from "@/components/ThemeButton";
 export default function Home() {
   return (
     <>
-      <div className="background">
+      <div className="background overflow-x-hidden">
         <Navigation />
         <ThemeButton />
         <div id="hero">

@@ -10,8 +10,11 @@ import {
   User,
 } from "lucide-react";
 import HeadlineDivider from "./common/HeadlineDivider";
+import { useTranslation } from "react-i18next";
 
 export default function ContactSection() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,7 +27,7 @@ export default function ContactSection() {
   );
 
   const contactInfo = {
-    email: "kyawboboaung@gmail.com",
+    email: "dev.kyawboboaung@gmail.com",
     github: "https://github.com/kyawboboaung",
     linkedin: "https://linkedin.com/in/kyawboboaung",
   };
@@ -64,15 +67,12 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text">
-            Get in{" "}
-            <span className="title-text">
-              Touch
-            </span>
+          <h2 className="text-3xl font-bold text">
+            {t("contact.sectionTitle")}{" "}
+            <span className="title-text">{t("contact.sectionTitle2")}</span>
           </h2>
-          <p className="secondary-text text-sm mt-2">
-            I’d love to hear from you — let’s build something great together.
-          </p>
+          <p className="secondary-text text-sm mt-2">{t("contact.subtitle")}</p>
+          {/* Divider */}
           <HeadlineDivider />
         </div>
 
@@ -80,16 +80,18 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Contact Info */}
           <div className="space-y-4">
+            {/* Email */}
             <a href={`mailto:${contactInfo.email}`} className="contact-card">
               <div className="contact-icon bg-gradient-to-r from-red-500 to-pink-500">
                 <Mail className="w-5 h-5" />
               </div>
               <div>
-                <h4>Email</h4>
+                <h4>{t("contact.info.email.label")}</h4>
                 <p>{contactInfo.email}</p>
               </div>
             </a>
 
+            {/* GitHub */}
             <a
               href={contactInfo.github}
               target="_blank"
@@ -100,11 +102,12 @@ export default function ContactSection() {
                 <Github className="w-5 h-5" />
               </div>
               <div>
-                <h4>GitHub</h4>
-                <p>Repositories & projects</p>
+                <h4>{t("contact.info.github.label")}</h4>
+                <p>{contactInfo.github}</p>
               </div>
             </a>
 
+            {/* LinkedIn */}
             <a
               href={contactInfo.linkedin}
               target="_blank"
@@ -115,8 +118,8 @@ export default function ContactSection() {
                 <Linkedin className="w-5 h-5" />
               </div>
               <div>
-                <h4>LinkedIn</h4>
-                <p>Professional networking</p>
+                <h4>{t("contact.info.linkedin.label")}</h4>
+                <p>{contactInfo.linkedin}</p>
               </div>
             </a>
           </div>
@@ -124,7 +127,9 @@ export default function ContactSection() {
           {/* Contact Form */}
           <form onSubmit={handleSubmit} className="contact-form">
             <div>
-              <label className="contact-label">Name</label>
+              <label className="contact-label">
+                {t("contact.form.name.label")}
+              </label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
@@ -132,14 +137,16 @@ export default function ContactSection() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  placeholder="Enter your name"
+                  placeholder={t("contact.form.name.placeholder")}
                   className="contact-input contact-input-with-icon"
                 />
               </div>
             </div>
 
             <div>
-              <label className="contact-label">Email</label>
+              <label className="contact-label">
+                {t("contact.form.email.label")}
+              </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
@@ -147,32 +154,36 @@ export default function ContactSection() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="Enter your email"
+                  placeholder={t("contact.form.email.placeholder")}
                   className="contact-input contact-input-with-icon"
                 />
               </div>
             </div>
 
             <div>
-              <label className="contact-label">Subject</label>
+              <label className="contact-label">
+                {t("contact.form.subject.label")}
+              </label>
               <input
                 type="text"
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                placeholder="What's this about?"
+                placeholder={t("contact.form.subject.placeholder")}
                 className="contact-input"
               />
             </div>
 
             <div>
-              <label className="contact-label">Message</label>
+              <label className="contact-label">
+                {t("contact.form.message.label")}
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={4}
-                placeholder="Tell me about your project..."
+                placeholder={t("contact.form.message.placeholder")}
                 className="contact-input resize-none"
               />
             </div>
@@ -189,12 +200,12 @@ export default function ContactSection() {
               {isSubmitting ? (
                 <div className="flex items-center">
                   <div className="w-4 h-4 border-2 border-gray-400 border-t-white rounded-full animate-spin mr-2"></div>
-                  Sending...
+                  {t("contact.form.sending")}
                 </div>
               ) : (
                 <>
                   <Send className="w-4 h-4 mr-2" />
-                  Send Message
+                  {t("contact.form.submit.enabled")}
                 </>
               )}
             </button>
@@ -210,12 +221,12 @@ export default function ContactSection() {
                 {submitStatus === "success" ? (
                   <>
                     <CheckCircle className="w-4 h-4 mr-2" />
-                    Message sent successfully!
+                    {t("contact.form.status.success")}
                   </>
                 ) : (
                   <>
                     <AlertCircle className="w-4 h-4 mr-2" />
-                    Failed to send. Try again.
+                    {t("contact.form.status.error")}
                   </>
                 )}
               </div>

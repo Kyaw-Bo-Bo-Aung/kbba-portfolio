@@ -21,6 +21,21 @@ export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   useEffect(() => {
     const currentRole = roles[currentIndex];
 
@@ -53,23 +68,23 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             {/* Name */}
-            <h1 className="text-5xl lg:text-7xl hero-tile leading-tight">
+            <h1 className="text-4xl lg:text-5xl hero-tile">
               {t("name.first")}
             </h1>
 
             {/* Animated Role */}
             <div className="h-12 flex flex-col">
-              <span className="text-2xl lg:text-3xl secondary-text mr-2">
+              <span className="text-xl lg:text-2xl secondary-text mr-2">
                 {t("hero.iam")}
               </span>
-              <span className="text-2xl lg:text-3xl font-semibold running-text min-w-max">
+              <span className="text-xl lg:text-2xl font-semibold running-text min-w-max">
                 {displayText}
                 <span className="animate-pulse">|</span>
               </span>
             </div>
 
             {/* Description */}
-            <p className="text-lg text leading-relaxed max-w-2xl">
+            <p className="text-md text leading-relaxed max-w-2xl">
               {t("hero.description")}
             </p>
 
@@ -97,12 +112,16 @@ export default function HeroSection() {
 
             {/* Buttons */}
             <div className="flex gap-4">
-              <button className="btn-action px-8 py-3">
+              <button
+                onClick={() => scrollToSection("projects")}
+                className="btn-action px-5 py-2"
+              >
                 {t("hero.buttons.work")}
               </button>
 
               <button
-                className="border border-gray-600 text-gray-400 px-8 py-3 rounded-lg font-semibold cursor-pointer
+                onClick={() => scrollToSection("contact")}
+                className="border border-gray-600 text-gray-400 px-5 py-2 rounded-lg font-semibold cursor-pointer
            transition-colors duration-300 hover:bg-gray-700 hover:border-gray-500 hover:text-white"
               >
                 {t("hero.buttons.contact")}
@@ -111,19 +130,19 @@ export default function HeroSection() {
             <div className="flex space-x-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
+                className="secondary-text duration-300 transform hover:scale-110"
               >
                 <Github className="w-6 h-6" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
+                className="secondary-text duration-300 transform hover:scale-110"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
+                className="secondary-text duration-300 transform hover:scale-110"
               >
                 <Mail className="w-6 h-6" />
               </a>
@@ -172,10 +191,25 @@ export default function HeroSection() {
         </div>
 
         {/* 🌍 Language Switcher */}
-        <div className="mt-8 flex gap-3 text">
-          <button onClick={() => i18n.changeLanguage("en")}>🇺🇸 EN</button>
-          <button onClick={() => i18n.changeLanguage("mm")}>🇲🇲 MM</button>
-          <button onClick={() => i18n.changeLanguage("th")}>🇹🇭 TH</button>
+        <div className="mt-8 inline-flex rounded-md text border-1">
+          <button
+            className="transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 cursor-pointer py-2 px-3"
+            onClick={() => i18n.changeLanguage("en")}
+          >
+            🇺🇸 EN
+          </button>
+          <button
+            className="transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 cursor-pointer py-2 border-x-1 px-3"
+            onClick={() => i18n.changeLanguage("mm")}
+          >
+            🇲🇲 MM
+          </button>
+          <button
+            className="transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 cursor-pointer py-2 px-3"
+            onClick={() => i18n.changeLanguage("th")}
+          >
+            🇹🇭 TH
+          </button>
         </div>
       </div>
     </section>

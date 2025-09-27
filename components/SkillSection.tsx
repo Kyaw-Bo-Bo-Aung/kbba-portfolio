@@ -60,13 +60,13 @@ export default function SkillsCarousel() {
       <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text mb-6">
+          <h2 className="text-3xl font-bold text mb-6">
             {t("skill.title")} &{" "}
             <span className="title-text">
               {t("skill.title2")}
             </span>
           </h2>
-          <p className="text-xl secondary-text max-w-3xl mx-auto">
+          <p className="text-md secondary-text max-w-3xl mx-auto">
             {t("skill.description")}
           </p>
 

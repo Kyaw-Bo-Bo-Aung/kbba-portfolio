@@ -47,5 +47,140 @@
       "title": "Cloud",
       "description": "Microservices, ကလောက်ဒ်ပေါ်တွင် ဖြန့်ကြက်ခြင်း၊ Docker နှင့် CI/CD pipelines များ"
     }
+  },
+  "experience": {
+    "title": "လုပ်ငန်း",
+    "title2": "အတွေ့အကြုံ",
+    "subtitle": "ကျွန်ုပ်၏ လုပ်ငန်းခွင် ခရီးစဉ်နှင့် ကျွန်ုပ်၏ အကျိုးသက်ရောက်မှုများ",
+    "achievements": "အဓိက အောင်မြင်မှုများ:"
+  },
+  "items": [
+    {
+      "title": "စီနီယာ ဆော့ဖ်ဝဲလ် အင်ဂျင်နီယာ",
+      "company": "AirRetailer Technology LLC",
+      "location": "Dubai, United Arab Emirates",
+      "duration": "Jun 2024 – Present",
+      "description": "Next.js, React.js, နှင့် Node.js BFF တို့ကို အသုံးပြု၍ ခရီးသွားလာရေးအတွက် အများအပြား အသုံးပြုနိုင်သော booking platform ကို ဒီဇိုင်းရေးဆွဲထိန်းသိမ်းခြင်း၊ ထို့ပြင် flights, hotels, and cars များအတွက် အဓိကလုပ်ငန်း module များကို ပံ့ပိုးရန် Java Spring Boot microservices များကို တည်ဆောက်၍ ပေါင်းစပ်ခြင်း။",
+      "achievements": [
+        "React component refactoring ပြုလုပ်ခြင်းဖြင့် navigation performance ကို ၃၀% တိုးတက်စေခဲ့ပါသည်။",
+        "ချဲ့ထွင်နိုင်စွမ်းအတွက် မလိုအပ်သော re-renders များကို ၂၅% လျှော့ချခဲ့ပါသည်။",
+        "Backend API aggregation ကို အကောင်းဆုံးဖြစ်အောင်လုပ်ဆောင်ခြင်းဖြင့် data latency ကို ၂၀% လျှော့ချခဲ့ပါသည်။",
+        "UX နှင့် လုပ်ငန်းခွင် flow တိုးတက်မှုများအတွက် product team များနှင့် ပူးပေါင်းလုပ်ဆောင်ခဲ့ပါသည်။"
+      ]
+    },
+    {
+      "title": "စီနီယာ ဘက်အန့် Developer",
+      "company": "Illuvium Co., Ltd",
+      "location": "Yangon, Myanmar",
+      "duration": "Dec 2023 – Feb 2024",
+      "description": "Java (Spring Boot) ကို အသုံးပြု၍ အချိန်နှင့်တပြေးညီလုပ်ဆောင်နိုင်သော လုပ်ဆောင်ချက်များနှင့် စနစ်တည်ငြိမ်မှုကို အာရုံစိုက်ပြီး backend services များကို ဖန်တီး၍ အကောင်းဆုံးဖြစ်အောင် ပြုလုပ်ခြင်း။",
+      "achievements": [
+        "WebSocket handling ကို အကောင်းဆုံးဖြစ်အောင် ပြုလုပ်ခြင်းဖြင့် real-time စနစ်၏ ထိရောက်မှုကို ၃၅% တိုးတက်စေခဲ့ပါသည်။",
+        "ထိန်းသိမ်းရလွယ်ကူစေရန် legacy code များကို modular services များအဖြစ် ပြန်လည်ပြင်ဆင်ခဲ့ပါသည်။",
+        "အရေးပါသော legacy bottlenecks များကို ဖြေရှင်းခြင်းဖြင့် downtime ကို လျှော့ချခဲ့ပါသည်။"
+      ]
+    },
+    {
+      "title": "ဆော့ဖ်ဝဲလ် အင်ဂျင်နီယာ (Full-Stack)",
+      "company": "CGM Golden Land Co., Ltd",
+      "location": "Yangon, Myanmar",
+      "duration": "Feb 2022 – May 2023",
+      "description": "React.js နှင့် Node.js တို့ဖြင့် HR & Accounting စနစ်များကို တည်ဆောက်၍ လုပ်ငန်းခွင် flow များကို တိုးတက်စေရန် automation များကို ပေါင်းစပ်ထည့်သွင်းခြင်း။",
+      "achievements": [
+        "စနစ် automation မှတစ်ဆင့် HR ၏ ထုတ်လုပ်နိုင်စွမ်းကို ၃၀% တိုးမြှင့်ခဲ့ပါသည်။",
+        "QR code attendance စနစ်ဖြင့် တက်ရောက်မှုအမှားများကို ၄၀% လျှော့ချခဲ့ပါသည်။",
+        "N+1 queries များကို ပြင်ဆင်ခြင်းဖြင့် app response time ကို ၂၅% တိုးတက်စေခဲ့ပါသည်။"
+      ]
+    },
+    {
+      "title": "အလွတ်တန်း Full-Stack Developer",
+      "company": "Self-employed",
+      "location": "Remote",
+      "duration": "2021 – 2022",
+      "description": "ဖောက်သည်များအတွက် dashboards, CRM tools, နှင့် stock management စနစ်များကို အဓိကထား၍ စိတ်ကြိုက်စီးပွားရေးဖြေရှင်းနည်းများကို ပံ့ပိုးပေးခြင်း။",
+      "achievements": [
+        "inventory, order, နှင့် reporting dashboards များကို ဒီဇိုင်းရေးဆွဲခဲ့ပါသည်။",
+        "လုံခြုံရေးနှင့် ချဲ့ထွင်နိုင်စွမ်းအတွက် role-based access ကို အကောင်အထည်ဖော်ခဲ့ပါသည်။",
+        "data-driven decisions များအတွက် analytics dashboards များကို တည်ဆောက်ခဲ့ပါသည်။"
+      ]
+    }
+  ],
+  "education": {
+    "sectionTitle": "ပညာရေး",
+    "list": [
+      {
+        "degree": "အင်ဂျင်နီယာဘွဲ့",
+        "school": "ရန်ကုန်နည်းပညာတက္ကသိုလ်",
+        "location": "ရန်ကုန်၊ မြန်မာ",
+        "duration": "2014 – 2020"
+      }
+    ]
+  },
+  "certificates": {
+    "sectionTitle": "အသိအမှတ်ပြုလက်မှတ်များ",
+    "list": [
+      {
+        "title": "Meta Front-End Developer Professional Certificate",
+        "provider": "Meta (Facebook)"
+      },
+      {
+        "title": "Java EE Spring",
+        "provider": "Turing Training Center"
+      },
+      {
+        "title": "JavaScript: Basics to Advanced",
+        "provider": "EdYoda Digital University"
+      },
+      {
+        "title": "IBM Full-Stack Developer Certificate",
+        "provider": "IBM"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "ဆက်သွယ်ရန်",
+    "sectionTitle2": "",
+    "subtitle": "သင့်ထံမှ ကြားသိလိုပါတယ် — အတူတူ ကောင်းမွန်တဲ့ အရာတစ်ခုကို ဖန်တီးကြပါစို့။",
+    "info": {
+      "email": {
+        "label": "အီးမေးလ်",
+        "description": "ကျွန်ုပ်ထံသို့ တိုက်ရိုက် အီးမေးလ်ပို့ပါ"
+      },
+      "github": {
+        "label": "GitHub",
+        "description": "Project နှင့် repositories များ"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "လုပ်ငန်းခွင်ဆိုင်ရာ ကွန်ရက်"
+      }
+    },
+    "form": {
+      "name": {
+        "label": "အမည်",
+        "placeholder": "သင့်အမည်ကို ထည့်ပါ"
+      },
+      "email": {
+        "label": "အီးမေးလ်",
+        "placeholder": "သင့်အီးမေးလ်ကို ထည့်ပါ"
+      },
+      "subject": {
+        "label": "အကြောင်းအရာ",
+        "placeholder": "ဘာအကြောင်းလဲ။"
+      },
+      "message": {
+        "label": "စာ",
+        "placeholder": "သင့် project အကြောင်း ပြောပြပါ..."
+      },
+      "submit": {
+        "enabled": "စာပို့ရန်",
+        "disabled": "ကျေးဇူးပြု၍ အချက်အလက်အားလုံးကို ဖြည့်ပါ"
+      },
+      "sending": "ပို့နေသည်...",
+      "status": {
+        "success": "စာပို့ခြင်း အောင်မြင်ပါသည်!",
+        "error": "ပို့ခြင်း မအောင်မြင်ပါ၊ ထပ်ကြိုးစားကြည့်ပါ"
+      }
+    }
   }
 }
