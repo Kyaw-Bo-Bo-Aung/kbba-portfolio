@@ -11,6 +11,9 @@ import {
   Monitor,
 } from "lucide-react";
 import Image from "next/image";
+import ThailandFlag from "./svgs/thailandFlag";
+import EnglishFlag from "./svgs/englighFlag";
+import MyanmarFlag from "./svgs/myanmarFlag";
 
 export default function HeroSection() {
   const { t, i18n } = useTranslation();
@@ -197,22 +200,22 @@ export default function HeroSection() {
         {/* 🌍 Language Switcher */}
         <div className="mt-8 inline-flex rounded-md text border-1">
           <button
-            className="transition-all duration-300 translation cursor-pointer py-2 px-3"
+            className="flex gap-1 items-center transition-all duration-300 translation cursor-pointer py-2 px-3"
             onClick={() => i18n.changeLanguage("en")}
           >
-            🇺🇸 EN
+            <EnglishFlag /> EN
           </button>
           <button
-            className="transition-all duration-300 translation cursor-pointer py-2 border-x-1 px-3"
+            className="flex gap-1 items-center transition-all duration-300 translation cursor-pointer py-2 border-x-1 px-3"
             onClick={() => i18n.changeLanguage("mm")}
           >
-            🇲🇲 MM
+            <MyanmarFlag /> MM
           </button>
           <button
-            className="transition-all duration-300 translation cursor-pointer py-2 px-3"
+            className="flex gap-1 items-center transition-all duration-300 translation cursor-pointer py-2 px-3"
             onClick={() => i18n.changeLanguage("th")}
           >
-            🇹🇭 TH
+            <ThailandFlag /> TH
           </button>
         </div>
       </div>
