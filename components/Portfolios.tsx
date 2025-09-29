@@ -1,6 +1,6 @@
 "use client";
 
-import { Earth, Github, Globe, Link, Lock } from "lucide-react";
+import { Github, Globe, Lock } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import HeadlineDivider from "./common/HeadlineDivider";

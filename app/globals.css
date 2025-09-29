@@ -25,11 +25,11 @@
 }
 
 .dark .skill-edge-right {
-  @apply bg-gradient-to-r from-slate-800 to-transparent;
+  @apply bg-gradient-to-r from-[#00112c] to-transparent;
 }
 
 .dark .skill-edge-left {
-  @apply bg-gradient-to-l from-slate-800 to-transparent;
+  @apply bg-gradient-to-l from-[#00112c] to-transparent;
 }
 
 .skill-bg {
@@ -84,7 +84,7 @@
 }
 
 .dark .background {
-  background-color: #1e293b;
+  background-color: #00112c;
 }
 
 .text {

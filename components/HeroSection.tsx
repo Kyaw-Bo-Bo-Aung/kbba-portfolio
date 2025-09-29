@@ -162,7 +162,7 @@ export default function HeroSection() {
               {/* <div className="relative rounded-2xl p-1 shadow-2xl"> */}
               <div className="w-50 h-30 sm:w-100 sm:h-[14rem] md:w-160 lg:h-[28rem] rounded-xl flex items-center justify-center text-gray-400">
                 <Image
-                  src="/kbba_hero.png"
+                  src="/hero.png"
                   alt="Profile Image"
                   fill
                   objectFit="contain"
