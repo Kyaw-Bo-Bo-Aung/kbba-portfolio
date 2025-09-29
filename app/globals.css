@@ -4,6 +4,14 @@
   fill: #333333
 }
 
+.translation {
+  @apply hover:bg-slate-800 hover:text-slate-100;
+}
+
+.dark .translation {
+  @apply hover:bg-slate-700/100 hover:text-white;
+}
+
 .dark .skill-logo-color {
   fill: #dddddd
 }

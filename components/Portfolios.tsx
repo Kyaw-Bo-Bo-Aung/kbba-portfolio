@@ -4,8 +4,10 @@ import { Earth, Github, Globe, Link, Lock } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import HeadlineDivider from "./common/HeadlineDivider";
+import { useTranslation } from "react-i18next";
 
 export default function PortfolioWebsites() {
+  const { t } = useTranslation();
   const projects = [
     {
       id: 1,
@@ -13,7 +15,7 @@ export default function PortfolioWebsites() {
       purpose:
         "A travel technology platform for corporate travel management, providing an AI-powered solution for planning, booking, and managing travel for businesses, TMCs, and airlines.",
       githubUrl: null,
-      websiteUrl: "https://github.com/yourusername/weather-app",
+      websiteUrl: "https://www.airbooking.com/",
       isPrivate: false,
       tech: [
         "Airline Booking",
@@ -33,7 +35,7 @@ export default function PortfolioWebsites() {
       githubUrl: null,
       isPrivate: true,
       tech: ["Order Management", "Inventory", "CRM", "Analytics"],
-      image: "/portfolio/client-system.png",
+      image: "/portfolios/kzl.png",
     },
     {
       id: 3,
@@ -51,7 +53,7 @@ export default function PortfolioWebsites() {
       purpose:
         "A suite of business management software solutions designed to optimize various operational aspects such as HR, school administration, sales, and inventory management.",
       githubUrl: null,
-      websiteUrl: "https://github.com/yourusername/weather-app",
+      websiteUrl: "https://bib-mm.com/",
       isPrivate: false,
       tech: [
         "HR Management",
@@ -59,27 +61,27 @@ export default function PortfolioWebsites() {
         "POS & Inventory Control System",
         "Mini ERP",
       ],
-      image: "/portfolio/weather.png",
+      image: "/portfolios/bib.png",
     },
     {
       id: 5,
-      name: "Dingar - Digital Wallet",
-      purpose:
-        "A digital wallet application that allows users to securely store, manage, and transact with their money electronically, providing features such as peer-to-peer payments and transaction history.",
-      githubUrl: "null",
-      isPrivate: false,
-      tech: ["Mobile Payments", "QR Code", "Account Checking"],
-      image: "/portfolios/e_wallet.png",
-    },
-    {
-      id: 6,
       name: "Job Finder Platform",
       purpose:
         "A job search platform that connects job seekers with employers, offering features such as job listings from the third-party APIs.",
-      githubUrl: "null",
+      githubUrl: "https://github.com/Kyaw-Bo-Bo-Aung/job-finder-backend",
       isPrivate: false,
       tech: ["Third-party API", "Job Search", "Filtering", "Bookmarking"],
       image: "/portfolios/job_finder.png",
+    },
+    {
+      id: 6,
+      name: "Dingar - Digital Wallet",
+      purpose:
+        "A digital wallet application that allows users to securely store, manage, and transact with their money electronically, providing features such as peer-to-peer payments and transaction history.",
+      githubUrl: "https://github.com/Kyaw-Bo-Bo-Aung/din_gar",
+      isPrivate: false,
+      tech: ["Mobile Payments", "QR Code", "Account Checking"],
+      image: "/portfolios/e_wallet.png",
     },
   ];
 
@@ -94,11 +96,10 @@ export default function PortfolioWebsites() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text mb-4">
-            Featured <span className="title-text">Projects</span>
+            {t("portfolio.title")} <span className="title-text">{t("portfolio.title2")}</span>
           </h2>
           <p className="text-md secondary-text max-w-2xl mx-auto mb-6">
-            A showcase of my recent work including personal projects and client
-            solutions
+            {t("portfolio.subtitle")}
           </p>
           <HeadlineDivider />
         </div>
@@ -144,7 +145,7 @@ export default function PortfolioWebsites() {
                 {project.isPrivate && (
                   <div className="project-button-disabled">
                     <Lock className="w-4 h-4 mr-2" />
-                    Confidential
+                    {t("portfolio.Client Project")}
                   </div>
                 )}
 
@@ -156,7 +157,7 @@ export default function PortfolioWebsites() {
                     className="project-button"
                   >
                     <Github className="w-4 h-4 mr-2" />
-                    View Code
+                    {t("portfolio.View Code")}
                   </a>
                 ) : null}
                 {project.websiteUrl && (
@@ -168,7 +169,7 @@ export default function PortfolioWebsites() {
             duration-300 hover:bg-gray-700 hover:border-gray-500 hover:text-whiteinline-flex items-center px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
                   >
                     <Globe className="w-4 h-4 mr-2" />
-                    Website
+                    {t("portfolio.Website")}
                   </a>
                 )}
               </div>
@@ -184,7 +185,7 @@ export default function PortfolioWebsites() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         ></motion.div>
-        <span>and many more on my github</span>
+        <span>{t("portfolio.and many more on my github")}</span>
         <motion.div
           className={`w-24 h-1 bg-gradient-to-r from-blue-500 to-slate-500 rounded-full`}
           initial={{ opacity: 0, x: 80 }}

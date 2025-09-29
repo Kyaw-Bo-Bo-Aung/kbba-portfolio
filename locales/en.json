@@ -137,6 +137,15 @@
       }
     ]
   },
+  "portfolio": {
+    "title": "Featured",
+    "title2": "Projects",
+    "subtitle": "A showcase of my recent work including personal projects and client solutions",
+    "Client Project": "Client Project",
+    "View Code": "View Code",
+    "Website": "Website",
+    "and many more on my github": "and many more on my github"
+  },
   "contact": {
     "sectionTitle": "Get in",
     "sectionTitle2": "Touch",
@@ -179,7 +188,8 @@
       "sending": "Sending...",
       "status": {
         "success": "Message sent successfully!",
-        "error": "Failed to send. Try again."
+        "error": "Failed to send. Try again.",
+        "email_limit": "Please wait a minute before sending another message."
       }
     }
   }

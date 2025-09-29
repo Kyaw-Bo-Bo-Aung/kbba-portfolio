@@ -129,19 +129,23 @@ export default function HeroSection() {
             </div>
             <div className="flex space-x-6">
               <a
-                href="#"
+                href="https://github.com/Kyaw-Bo-Bo-Aung"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="secondary-text duration-300 transform hover:scale-110"
               >
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/kyaw-bo-bo-aung/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="secondary-text duration-300 transform hover:scale-110"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href={`mailto:dev.kyawboboaung@gmail.com`}
                 className="secondary-text duration-300 transform hover:scale-110"
               >
                 <Mail className="w-6 h-6" />
@@ -193,19 +197,19 @@ export default function HeroSection() {
         {/* 🌍 Language Switcher */}
         <div className="mt-8 inline-flex rounded-md text border-1">
           <button
-            className="transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 cursor-pointer py-2 px-3"
+            className="transition-all duration-300 translation cursor-pointer py-2 px-3"
             onClick={() => i18n.changeLanguage("en")}
           >
             🇺🇸 EN
           </button>
           <button
-            className="transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 cursor-pointer py-2 border-x-1 px-3"
+            className="transition-all duration-300 translation cursor-pointer py-2 border-x-1 px-3"
             onClick={() => i18n.changeLanguage("mm")}
           >
             🇲🇲 MM
           </button>
           <button
-            className="transition-all duration-300 hover:bg-slate-100 hover:text-slate-900 cursor-pointer py-2 px-3"
+            className="transition-all duration-300 translation cursor-pointer py-2 px-3"
             onClick={() => i18n.changeLanguage("th")}
           >
             🇹🇭 TH

@@ -14,22 +14,24 @@ import { useTranslation } from "react-i18next";
 
 export default function ContactSection() {
   const { t } = useTranslation();
+  const storage = typeof window !== "undefined" ? localStorage : null;
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
+    website: "", // honeypot
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "email_limit" | null>(
     null
   );
 
   const contactInfo = {
     email: "dev.kyawboboaung@gmail.com",
-    github: "https://github.com/kyawboboaung",
-    linkedin: "https://linkedin.com/in/kyawboboaung",
+    github: "https://www.linkedin.com/in/kyaw-bo-bo-aung/",
+    linkedin: "https://www.linkedin.com/in/kyaw-bo-bo-aung/",
   };
 
   const handleInputChange = (
@@ -47,12 +49,32 @@ export default function ContactSection() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+    if(new Date().getTime() - new Date(storage?.getItem("lastContactFormSubmitted") || "").getTime() < 60 * 1000) {
+      setSubmitStatus("email_limit");
+      setIsSubmitting(false);
+      return;
+    }
 
-      setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        website: "",
+      });
       setSubmitStatus("success");
-    } catch {
+      storage?.setItem("lastContactFormSubmitted", new Date().toISOString());
+    } catch (err) {
+      console.error(err);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -60,7 +82,7 @@ export default function ContactSection() {
   };
 
   const isFormValid =
-    formData.name && formData.email && formData.subject && formData.message;
+    formData.name.trim() && formData.email.trim() && formData.subject.trim() && formData.message.trim();
 
   return (
     <section className="py-20">
@@ -160,6 +182,15 @@ export default function ContactSection() {
               </div>
             </div>
 
+            <input
+              type="text"
+              name="website"
+              value={formData.website || ""}
+              onChange={handleInputChange}
+              style={{ display: "none" }}
+              tabIndex={-1}
+              autoComplete="off"
+            />
             <div>
               <label className="contact-label">
                 {t("contact.form.subject.label")}
@@ -223,7 +254,14 @@ export default function ContactSection() {
                     <CheckCircle className="w-4 h-4 mr-2" />
                     {t("contact.form.status.success")}
                   </>
-                ) : (
+                ) : submitStatus === "email_limit" ?
+                (
+                  <>
+                    <AlertCircle className="w-4 h-4 mr-2" />
+                    {t("contact.form.status.email_limit")}
+                  </>
+                )
+                : (
                   <>
                     <AlertCircle className="w-4 h-4 mr-2" />
                     {t("contact.form.status.error")}
